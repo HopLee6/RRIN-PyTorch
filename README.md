@@ -71,7 +71,7 @@ Download our interpolated results:
 
 
 ### Contact
-[Haopeng Li](hplee@mail.nwpu.edu.cn)
+[Haopeng Li](mailto:hplee@mail.nwpu.edu.cn)
 
 
 
