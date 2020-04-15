@@ -49,7 +49,6 @@ class UNet(nn.Module):
 
         return self.last(x)
 
-
 class UNetConvBlock(nn.Module):
     def __init__(self, in_size, out_size, padding):
         super(UNetConvBlock, self).__init__()
@@ -75,7 +74,6 @@ class UNetUpBlock(nn.Module):
                 nn.Upsample(mode='bilinear', scale_factor=2),
                 nn.Conv2d(in_size, out_size, kernel_size=3, padding=1),
             )
-
         self.conv_block = UNetConvBlock(in_size, out_size, padding)
 
     def center_crop(self, layer, target_size):
