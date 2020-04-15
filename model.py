@@ -43,17 +43,12 @@ class Net(nn.Module):
         Mask = F.sigmoid(self.Mask(temp))
         w1, w2 = (1-t)*Mask[:,0:1,:,:], t*Mask[:,1:2,:,:]
         output = (w1*xt1+w2*xt2)/(w1+w2+1e-8)
-
         return output
 
     def forward(self, input0, input1, t=0.5):
 
         output = self.process(input0,input1,self.Flow_L,t)
-
         compose = torch.cat((input0, input1, output),1)
-
         final = self.final(compose)+output
-
         final = final.clamp(0,1)
-
         return output
