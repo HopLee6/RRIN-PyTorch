@@ -20,7 +20,6 @@ def main():
     args = parser.parse_args()
     use_cuda = not args.no_cuda and torch.cuda.is_available()
 
-
     transform = transforms.transforms.ToTensor()
 
     model = Net()
