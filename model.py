@@ -9,15 +9,15 @@ def warp(img, flow):
     gridX, gridY = np.meshgrid(np.arange(W), np.arange(H))
     gridX = torch.tensor(gridX, requires_grad=False).cuda()
     gridY = torch.tensor(gridY, requires_grad=False).cuda()
-    u = flow[:, 0, :, :]
-    v = flow[:, 1, :, :]
-    x = gridX.unsqueeze(0).expand_as(u).float() + u
-    y = gridY.unsqueeze(0).expand_as(v).float() + v
-    x = 2*(x/W - 0.5)
-    y = 2*(y/H - 0.5)
-    grid = torch.stack((x,y), dim=3)
-    imgOut = F.grid_sample(img, grid)
-    return imgOut
+    u = flow[:,0,:,:]
+    v = flow[:,1,:,:]
+    x = gridX.unsqueeze(0).expand_as(u).float()+u
+    y = gridY.unsqueeze(0).expand_as(v).float()+v
+    normx = 2*(x/W-0.5)
+    normy = 2*(y/H-0.5)
+    grid = torch.stack((normx,normy), dim=3)
+    warped = F.grid_sample(img, grid)
+    return warped
 
 class Net(nn.Module):
     def __init__(self,level=3):
@@ -28,7 +28,7 @@ class Net(nn.Module):
         self.final = UNet(9,3,4)
 
     def process(self,x0,x1,t):
-    	
+
         x = torch.cat((x0,x1),1)
         Flow = self.Flow_L(x)
         Flow_0_1, Flow_1_0 = Flow[:,:2,:,:], Flow[:,2:4,:,:]
