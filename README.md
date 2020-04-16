@@ -1,9 +1,7 @@
-# RRIN (Video Frame Interpolation via Residue Refinement)
+# Video Frame Interpolation via Residue Refinement (RRIN)
  [Paper](https://ieeexplore.ieee.org/document/9053987/)
 
-Haopeng Li,
-Yuan Yuan, 
-[Qi Wang](http://crabwq.github.io/#top)
+Haopeng Li, Yuan Yuan, [Qi Wang](http://crabwq.github.io/#top)
 
 IEEE Conference on Acoustics, Speech, and Signal Processing, ICASSP 2020
 
@@ -46,7 +44,7 @@ Download repository:
 
 ### Pre-trained Model
 
-We provide the pre-trained model of "RRIN" at [OneDrive](https://1drv.ms/u/s!AsFdN0iAbWxBjIBWVVsdImS6md0jlA?e=1b14MH), which achieves the same results as reported in the paper. Download the pre-trained model to `/RRIN`
+We provide the pre-trained model of "RRIN" at [OneDrive](https://1drv.ms/u/s!AsFdN0iAbWxBjIBWVVsdImS6md0jlA?e=1b14MH), which achieves the same results as reported in the paper. Download the pre-trained model to `/RRIN`.
 
 
 
