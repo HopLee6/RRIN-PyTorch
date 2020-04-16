@@ -52,17 +52,18 @@ We provide the pre-trained model of "RRIN" at [OneDrive](https://1drv.ms/u/s!AsF
 
 ### Testing Demo
 
-Test the model using frames in `/RRIN/data`
+Test the model using frames in `/RRIN/data`:
 
 ```
 $ python demo.py
 ```
 
+and get the interpolated frame `/RRIN/data/im_interp.png`.
+
 
 
 ### Downloading Results
-Our RRIN model achieves the state-of-the-art performance on Vimeo90K, and comparable performance on UCF101.
-Download our interpolated results:
+Our RRIN model achieves the state-of-the-art performance on Vimeo90K, and comparable performance on UCF101. Download our interpolated results:
 
 [Vimeo90K](https://1drv.ms/u/s!AsFdN0iAbWxBjIBYTVYPA5-3RPGQmg?e=LJ2Q1F)
 
