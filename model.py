@@ -28,6 +28,7 @@ class Net(nn.Module):
         self.final = UNet(9,3,4)
 
     def process(self,x0,x1,t):
+    	
         x = torch.cat((x0,x1),1)
         Flow = self.Flow_L(x)
         Flow_0_1, Flow_1_0 = Flow[:,:2,:,:], Flow[:,2:4,:,:]
@@ -43,6 +44,7 @@ class Net(nn.Module):
         Mask = F.sigmoid(self.Mask(temp))
         w1, w2 = (1-t)*Mask[:,0:1,:,:], t*Mask[:,1:2,:,:]
         output = (w1*xt1+w2*xt2)/(w1+w2+1e-8)
+
         return output
 
     def forward(self, input0, input1, t=0.5):
@@ -51,4 +53,5 @@ class Net(nn.Module):
         compose = torch.cat((input0, input1, output),1)
         final = self.final(compose)+output
         final = final.clamp(0,1)
+
         return output
