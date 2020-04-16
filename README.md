@@ -79,11 +79,13 @@ Our RRIN model achieves the state-of-the-art performance on Vimeo90K, and compar
 The use of this code is RESTRICTED to **non-commercial research and educational purposes**.
 
 ```
-@INPROCEEDINGS{9053987, author={H. {Li} and Y. {Yuan} and Q. {Wang}}, 
+@INPROCEEDINGS{9053987, 
+author={H. {Li} and Y. {Yuan} and Q. {Wang}}, 
 booktitle={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
 title={Video Frame Interpolation Via Residue Refinement}, 
 year={2020}, 
-pages={2613-2617},}
+pages={2613-2617}
+}
 ```
 
 
