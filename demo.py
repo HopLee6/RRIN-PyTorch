@@ -1,12 +1,10 @@
 import argparse
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
+import torchvision
 from torchvision import transforms
-import os 
 from PIL import Image
 from model import Net
-import torchvision
+
 
 torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.fastest = True
