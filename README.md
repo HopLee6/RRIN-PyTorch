@@ -30,8 +30,8 @@ Experiments on public datasets demonstrate the effectiveness and superiority of 
 
 ### Requirements and Dependencies
 - Python = 3.6.8 in Anaconda3 = 4.7.5
-- Cuda = 9.2 & Cudnn = 7.0
-- PyTorch = 1.0.0
+- CUDA = 9.2 & cuDNN = 7.0
+- PyTorch = 1.0
 
 
 
