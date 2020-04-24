@@ -5,10 +5,8 @@ from torchvision import transforms
 from PIL import Image
 from model import Net
 
-
 torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.fastest = True
-
 
 def main():
     parser = argparse.ArgumentParser(description='PyTorch Video Frame Interpolation via Residue Refinement')
@@ -26,7 +24,6 @@ def main():
     model = model.cuda()
     model.eval()
 
-
     im1_path = 'data/im1.png'
     im2_path = 'data/im2.png'
 
@@ -41,9 +38,8 @@ def main():
         img1, img2 = img1.cuda(), img2.cuda()
         output = model(img1.unsqueeze(0), img2.unsqueeze(0))
         output = output.squeeze(0).cpu()
-        output = torchvision.transforms.functional.to_pil_image(output)
+        output = transforms.functional.to_pil_image(output)
         output.save('data/im_interp.png')
 
-        
 if __name__ == '__main__':
     main()
