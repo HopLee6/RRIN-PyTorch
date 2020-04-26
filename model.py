@@ -23,14 +23,14 @@ class Net(nn.Module):
     def __init__(self,level=3):
         super(Net, self).__init__()
         self.Mask = UNet(16,2,4)
-        self.Flow_L = UNet(6,4,5)
+        self.Flow = UNet(6,4,5)
         self.refine_flow = UNet(10,4,4)
         self.final = UNet(9,3,4)
 
     def process(self,x0,x1,t):
 
         x = torch.cat((x0,x1),1)
-        Flow = self.Flow_L(x)
+        Flow = self.Flow(x)
         Flow_0_1, Flow_1_0 = Flow[:,:2,:,:], Flow[:,2:4,:,:]
         Flow_t_0 = -(1-t)*t*Flow_0_1+t*t*Flow_1_0
         Flow_t_1 = (1-t)*(1-t)*Flow_0_1-t*(1-t)*Flow_1_0
