@@ -54,4 +54,4 @@ class Net(nn.Module):
         final = self.final(compose)+output
         final = final.clamp(0,1)
 
-        return output
+        return final
