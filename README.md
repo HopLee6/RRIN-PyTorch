@@ -36,7 +36,7 @@ Experiments on public datasets demonstrate the effectiveness and superiority of 
 
 
 ### Installation
-Download repository:
+Download the repository:
 
     $ git clone https://github.com/HopLee6/RRIN.git
 
@@ -63,9 +63,9 @@ and get the interpolated frame `/RRIN/data/im_interp.png`.
 ### Downloading Results
 Our RRIN model achieves the state-of-the-art performance on Vimeo90K, and comparable performance on UCF101. Download our interpolated results:
 
-[Vimeo90K](https://1drv.ms/u/s!AsFdN0iAbWxBjIBYTVYPA5-3RPGQmg?e=LJ2Q1F)
+- [Vimeo90K](https://1drv.ms/u/s!AsFdN0iAbWxBjIBYTVYPA5-3RPGQmg?e=LJ2Q1F)
 
-[UCF101](https://1drv.ms/u/s!AsFdN0iAbWxBjIBXnNcOEEmElKqsww?e=4s9eeo)
+- [UCF101](https://1drv.ms/u/s!AsFdN0iAbWxBjIBXnNcOEEmElKqsww?e=4s9eeo)
 
 
 
