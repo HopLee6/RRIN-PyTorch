@@ -4,6 +4,7 @@ import torchvision
 from torchvision import transforms
 from PIL import Image
 from model import Net
+import numpy as np
 
 torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.fastest = True
